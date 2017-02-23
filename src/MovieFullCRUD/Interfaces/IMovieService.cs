@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MovieFullCRUD.Models;
 
-namespace MovieFullCRUD.Intefaces
+namespace MovieFullCRUD.Interfaces
 {
     public interface IMovieService
     {
