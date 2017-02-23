@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieFullCRUD.Repository
 {
-    public class GenericRepository: IGenericRepository
+    public class GenericRepository : IGenericRepository
     {
         private ApplicationDbContext _db;
 
