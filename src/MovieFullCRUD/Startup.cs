@@ -14,7 +14,8 @@ using System.IO;
 using MovieFullCRUD.Data;
 using MovieFullCRUD.Models;
 using MovieFullCRUD.Services;
-
+using MovieFullCRUD.Interfaces;
+using MovieFullCRUD.Repository;
 
 namespace MovieFullCRUD
 {
@@ -55,11 +56,13 @@ namespace MovieFullCRUD
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-            
 
-            
-                        // add security policies
-                        services.AddAuthorization(options =>
+            //Our Services
+            services.AddScoped<IGenericRepository, GenericRepository>();
+            //services.AddScoped<IMovieService, MovieService>();
+
+            // add security policies
+            services.AddAuthorization(options =>
                         {
                             options.AddPolicy("AdminOnly", policy => policy.RequireClaim("IsAdmin"));
                         });
