@@ -11,7 +11,7 @@
                 </thead>
                 <tbody> 
                     <tr ng-repeat="movie in controller.movies">
-                        <td>{{movie.title}}</td>
+                        <td><a ui-sref="details({id: movie.id})">{{movie.title}}</a></td>
                         <td><a class="btn btn-danger" ng-click="controller.deleteMovie(movie.id)">Delete</a></td>
                         <td><a class="btn btn-danger" ui-sref="editMovie({id: movie.id})">Edit</a></td>
                     </tr>
