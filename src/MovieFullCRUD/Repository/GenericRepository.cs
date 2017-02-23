@@ -1,4 +1,5 @@
-﻿using MovieFullCRUD.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MovieFullCRUD.Data;
 using MovieFullCRUD.Interfaces;
 using System;
 using System.Collections.Generic;

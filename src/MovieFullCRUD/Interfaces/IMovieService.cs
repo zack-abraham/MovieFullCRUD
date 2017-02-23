@@ -6,9 +6,9 @@ namespace MovieFullCRUD.Interfaces
     public interface IMovieService
     {
         void AddMovie(Movie mov);
-        void DeleteMovie(Movie mov);
+        void DeleteMovie(int id);
         Movie GetMovie(int id);
         List<Movie> ListMovies();
-        void UpdateMovie(Movie mov);
+        void EditMovie(Movie mov);
     }
 }

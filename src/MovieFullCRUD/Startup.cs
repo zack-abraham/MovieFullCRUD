@@ -15,8 +15,7 @@ using MovieFullCRUD.Data;
 using MovieFullCRUD.Models;
 using MovieFullCRUD.Services;
 using MovieFullCRUD.Interfaces;
-
-
+using MovieFullCRUD.Repository;
 
 namespace MovieFullCRUD
 {
