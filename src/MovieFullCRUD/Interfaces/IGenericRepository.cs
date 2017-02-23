@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 
-namespace MovieFullCRUD.Repository
+
+namespace MovieFullCRUD.Interfaces
 {
     public interface IGenericRepository
     {

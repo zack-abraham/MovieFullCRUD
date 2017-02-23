@@ -14,7 +14,9 @@ using System.IO;
 using MovieFullCRUD.Data;
 using MovieFullCRUD.Models;
 using MovieFullCRUD.Services;
-using MovieFullCRUD.Repository;
+using MovieFullCRUD.Interfaces;
+
+
 
 namespace MovieFullCRUD
 {
