@@ -48,14 +48,15 @@ namespace MovieFullCRUD.Services
             _repo.Add(mov);
         }
 
-        public void UpdateMovie(Movie mov)
+        public void EditMovie(Movie mov)
         {
             _repo.Update(mov);
         }
 
-        public void DeleteMovie(Movie mov)
+        public void DeleteMovie(int id)
         {
-            _repo.Delete(mov);
+            Movie movToDelete = GetMovie(id);
+            _repo.Delete(movToDelete);
         }
     }
 }

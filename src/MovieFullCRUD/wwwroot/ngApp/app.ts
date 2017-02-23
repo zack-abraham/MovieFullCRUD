@@ -19,6 +19,18 @@ namespace MovieFullCRUD {
                 controller: MovieFullCRUD.Controllers.DetailsController,
                 controllerAs: 'controller'
             })
+            .state('addMovie', {
+                url: '/addMovie',
+                templateUrl: '/ngApp/views/addMovie.html',
+                controller: MovieFullCRUD.Controllers.AddMovieController,
+                controllerAs: 'controller'
+            })
+            .state('editMovie', {
+                url: '/editMovie',
+                templateUrl: '/ngApp/views/editMovie.html',
+                controller: MovieFullCRUD.Controllers.EditMovieController,
+                controllerAs: 'controller'
+            })
             .state('secret', {
                 url: '/secret',
                 templateUrl: '/ngApp/views/secret.html',
