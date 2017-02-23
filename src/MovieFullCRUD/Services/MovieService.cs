@@ -1,5 +1,4 @@
-﻿using MovieFullCRUD.Intefaces;
-using MovieFullCRUD.Interfaces;
+﻿using MovieFullCRUD.Interfaces;
 using MovieFullCRUD.Models;
 using System;
 using System.Collections.Generic;

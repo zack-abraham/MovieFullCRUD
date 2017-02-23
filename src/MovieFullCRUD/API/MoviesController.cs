@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MovieFullCRUD.Data;
 using MovieFullCRUD.Models;
+using MovieFullCRUD.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,9 +18,9 @@ namespace MovieFullCRUD.API
         private ApplicationDbContext _db;
 
         [HttpGet]
-        public List<Movie> Get(int id, string user)
+        public List<Movie> Get()
         {
-            return _movService.ListMovies(id, User.Identity.Name);
+            return _movService.ListMovies();
         }
 
         //[HttpGet("{id}")]
