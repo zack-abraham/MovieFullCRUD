@@ -26,7 +26,7 @@ namespace MovieFullCRUD {
                 controllerAs: 'controller'
             })
             .state('editMovie', {
-                url: '/editMovie',
+                url: '/editMovie/:id',
                 templateUrl: '/ngApp/views/editMovie.html',
                 controller: MovieFullCRUD.Controllers.EditMovieController,
                 controllerAs: 'controller'
