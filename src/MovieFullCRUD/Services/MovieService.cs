@@ -1,4 +1,5 @@
-﻿using MovieFullCRUD.Interfaces;
+﻿using MovieFullCRUD.Intefaces;
+using MovieFullCRUD.Interfaces;
 using MovieFullCRUD.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MovieFullCRUD.Services
 {
-    public class MovieService
+    public class MovieService: IMovieService
     {
         private IGenericRepository _repo;
 
@@ -27,6 +28,35 @@ namespace MovieFullCRUD.Services
                                       Director = m.Director
                                   }).ToList();
             return movies;
+        }
+
+        // gets a single movie
+        public Movie GetMovie(int id)
+        {
+            Movie movie = (from m in _repo.Query<Movie>()
+                           where m.Id == id
+                           select new Movie
+                           {
+                               Id = m.Id,
+                               Title = m.Title,
+                               Director = m.Director
+                           }).FirstOrDefault();
+            return movie;
+        }
+
+        public void AddMovie(Movie mov)
+        {
+            _repo.Add(mov);
+        }
+
+        public void UpdateMovie(Movie mov)
+        {
+            _repo.Update(mov);
+        }
+
+        public void DeleteMovie(Movie mov)
+        {
+            _repo.Delete(mov);
         }
     }
 }
