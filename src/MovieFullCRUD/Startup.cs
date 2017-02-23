@@ -60,7 +60,7 @@ namespace MovieFullCRUD
 
             //Our Services
             services.AddScoped<IGenericRepository, GenericRepository>();
-            //services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IMovieService, MovieService>();
 
             // add security policies
             services.AddAuthorization(options =>
